@@ -1,0 +1,358 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #fff;
+    padding: 30px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0 0 20px;
+    color: #2a2a2a;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.pengaturan {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #444;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
+    background-color: transparent;
+    transform: none;
+    box-shadow: none;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-intro, .contact-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+/* Profile Image Styling */
+.rosy {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.rosy img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.rosy img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Quote Styling */
+blockquote {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #555;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    position: relative;
+}
+
+blockquote::before,
+blockquote::after {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    opacity: 0.1;
+    font-family: Georgia, serif;
+}
+
+blockquote::before {
+    top: -10px;
+    left: 0;
+}
+
+blockquote::after {
+    bottom: -30px;
+    right: 0;
+}
+
+/* Portfolio Section */
+#portofolio {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+}
+
+#portofolio h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #2a2a2a;
+    position: relative;
+    display: inline-block;
+}
+
+#portofolio h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #444;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#portofolio h3 {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.portofolio_grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.portofolio_grid .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    transition: transform 0.3s ease;
+}
+
+.portofolio_grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+}
+
+.portofolio_grid .item:hover {
+    transform: translateY(-5px);
+}
+
+.portofolio_grid .item:hover img {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.portofolio_grid p {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #555;
+    max-width: 240px;
+}
+
+/* Links and Buttons */
+a.button {
+    display: inline-block;
+    margin: 15px 0 40px;
+    padding: 12px 24px;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+a.button:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Intro */
+.contact-intro {
+    text-align: center;
+    margin: 40px auto 20px;
+    max-width: 700px;
+}
+
+.contact-intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-intro p {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+
+    .social-button {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    blockquote {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .portofolio_grid .item {
+        width: 230px;
+    }
+
+    .rosy img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-button {
+        width: 220px;
+    }
+}
